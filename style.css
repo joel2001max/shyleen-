@@ -1,0 +1,285 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+.hero{
+		position: relative;
+		width: 100%;
+		min-height: 100vh;
+		background: #212121;
+	}
+
+nav{
+	display: flex;
+	width: 84%;
+	margin: auto;
+	padding: 20px 0;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 10rem;
+}
+
+nav ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 10px 20px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #eee;
+	font-weight: bold;
+}
+
+nav ul li a:hover{
+	color: #f1c21b;
+}
+
+.detel{
+	margin-left: 8%;
+	margin-top: 13%;
+}
+
+.detel h1{
+	font-size: 50px;
+	color: white;
+	margin-bottom: 20px;
+}
+span {
+	color: #f1c21b;
+}
+
+.detel p{
+	color: #eee;
+	line-height: 2;
+	font-size: 1.2rem;
+}
+.detel a{
+	background: #eee;
+	padding: 10px 18px;
+	text-decoration: none;
+	font-weight: bolder;
+	color: #212121;
+	display: inline-block;
+	margin: 30px 0;
+	border-radius: 5px;
+}
+
+
+.images{
+	width: 45%;
+	height: 80%;
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+	/*display: none;*/
+}
+
+.images img{
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+	bottom: 40px;
+}
+
+.images:hover .girl{
+	left:  45%;
+}
+
+/********************About Section**********************/
+
+
+.about{
+	width: 80%;
+	margin: 2rem auto;
+	padding: 2rem;
+}
+
+.line{
+	width: 5rem;
+	height: 3px;
+	background: #f1c21b ;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+
+.about-title{
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: .5rem;
+}
+
+.about-text{
+	font-size: 1rem;
+	line-height: 2;
+	color: #555;
+
+}
+/*************************About Section Ends******************************/
+/*******************Portifolio starts********************/
+#portifolio{
+	width: 100%;
+	background: #212121;
+	color: white;
+	padding: 2rem 0;
+}
+.portfolio{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid: .9rem;
+	align-items: start;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.portfolio-title{
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.skill-bar{
+	position: relative;
+	width: 50%;
+	margin: 20px auto;
+	height: 5px;
+	border-radius: 10px;
+	overflow: hidden;
+	border: 1px solid #555;
+}
+
+.load1{
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 80%;
+	background: #f1c21b;
+}
+.load2{
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 90%;
+	background: #f1c21b;
+}
+/****************Portifolio sections ends*********************/
+@media only screen and (max-width: 1199px){
+	.images{
+		width: 30%;
+		height: 80%;
+		position: absolute;
+		bottom: 0;
+		right: 100px;
+		display: none;
+	}
+
+	.images img{
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		transition: bottom 1s, left 1s;
+	}
+}
+
+@media only screen and (max-width: 700px){
+	.hero{
+		position: relative;
+		width: 100%;
+		min-height: 100vh;
+		background: #212121;
+	}
+	.detel{
+		margin-left: 8%;
+		margin-top: 13%;
+	}
+
+	.detel h1{
+		font-size: 50px;
+		color: whitesmoke;
+		margin-bottom: 20px;
+	}
+	.detel p{
+		color: #eee;
+		line-height: 20px;
+	}
+	.detel a{
+		background: #eee;
+		padding: 10px 18px;
+		text-decoration: none;
+		font-weight: bolder;
+		color: #212121;
+		display: inline-block;
+		margin: 30px 0;
+		border-radius: 5px;
+	}
+
+
+	.portfolio{
+		grid-template-columns: 1fr;
+		grid-gap: 5rem;
+	}
+
+	.images{
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 20rem;
+		display: block;
+	}
+
+	nav ul{
+		position: absolute;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, .9);
+		display: none;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap:  2rem;
+		
+
+	}
+	nav ul li a{
+		color: whitesmoke;
+	}
+
+
+}
+
+#btn{
+	padding: 10px;
+}
+
+.copyright{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.copyright small{
+	color: #f1c21d;
+}
